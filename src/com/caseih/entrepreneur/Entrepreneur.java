@@ -6,12 +6,12 @@ public class Entrepreneur {
 		int realProfitPerYear = 0;
 		int termOfCrediting = 0;
 
-		Credit credit = new Credit(3t000, 20);
+		Credit credit = new Credit(3000, 20);
 		NewEnterprise enterprise = new NewEnterprise(1000);
 
 		for (int i = 0; i <= termOfCrediting; i++) {
 			termOfCrediting = i+1;
-			System.out.println("Months of lending " + termOfCrediting); 
+			System.out.println("Years of lending " + termOfCrediting); 
 			System.out.println("Sum of credit " + credit.getSumOfCredit());
 			System.out.println("Sum of credit with charge " + credit.chargeInterestPerYear());
 			System.out.println("Enterparaise profit " + enterprise.getProfit());
