@@ -6,7 +6,7 @@ public class SumOfNumbers {
 
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
-		System.out.println("Insert number");
+		System.out.println("Insert number for runing or not number to exit");
 
 		while (scanner.hasNextLong()) {
 			Long number = scanner.nextLong();

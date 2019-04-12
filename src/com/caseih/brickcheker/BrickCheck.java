@@ -19,8 +19,8 @@ public class BrickCheck {
 	private int brickLength = 11;
 
 	public void tryLowerHorizontally() {
-		if (((Math.min(holeLength, holeWidth)) > (Math.min(brickLength, brickWidth)))
-				&& ((Math.max(holeLength, holeWidth)) > (Math.max(brickLength, brickWidth)))) {
+		if (((Math.min(holeLength, holeWidth)) >= (Math.min(brickLength, brickWidth)))
+				&& ((Math.max(holeLength, holeWidth)) >= (Math.max(brickLength, brickWidth)))) {
 			System.out.println("If you lower it horizontally, the brick will pass");
 		} else {
 			System.out.println("If you lower it horizontally, the brick will not pass");
@@ -28,8 +28,8 @@ public class BrickCheck {
 	}
 
 	public void tryLowerVertically() {
-		if (((Math.min(holeLength, holeWidth)) > (Math.min(brickHeigth, brickWidth)))
-				&& ((Math.max(holeLength, holeWidth)) > (Math.max(brickHeigth, brickWidth)))) {
+		if (((Math.min(holeLength, holeWidth)) >= (Math.min(brickHeigth, brickWidth)))
+				&& ((Math.max(holeLength, holeWidth)) >= (Math.max(brickHeigth, brickWidth)))) {
 			System.out.println("If you lower it vertically, the brick will pass");
 		} else {
 			System.out.println("If you lower it vertically, the brick will not pass");
@@ -37,8 +37,8 @@ public class BrickCheck {
 	}
 
 	public void tryLowerSideways() {
-		if (((Math.min(holeLength, holeWidth)) > (Math.min(brickHeigth, brickLength)))
-				&& ((Math.max(holeLength, holeWidth)) > (Math.max(brickHeigth, brickLength)))) {
+		if (((Math.min(holeLength, holeWidth)) >= (Math.min(brickHeigth, brickLength)))
+				&& ((Math.max(holeLength, holeWidth)) >= (Math.max(brickHeigth, brickLength)))) {
 			System.out.println("If you lower it sideways, the brick will pass");
 		} else {
 			System.out.println("If you lower it sideways, the brick will not pass");

@@ -3,8 +3,8 @@ package com.caseih.brickcheker;
 public class Test {
 
 	public static void main(String[] args) {
-		BrickCheck b = new BrickCheck(6,3,2);
-		b.setHoleParameters(3, 8);
+		BrickCheck b = new BrickCheck(8,8,8);
+		b.setHoleParameters(8, 8);
 		b.tryLowerVertically();
 		b.tryLowerHorizontally();
 		b.tryLowerSideways();
