@@ -3,10 +3,12 @@ package com.caseih.squarecalculator;
 public class SquareCalculator {
 
 	public static void main(String[] args) {
-		int number = 120;
+		String separator = ",";
+		StringBuilder sb = new StringBuilder();
+		int number = 2;
 		int startPoint = (int) Math.sqrt(number);
-		// System.out.println(startPoint);
-		int length = 10;
+		//System.out.println("Start point " + startPoint);
+		int length = 15;
 
 		int[] numbers = new int[length];
 
@@ -19,9 +21,14 @@ public class SquareCalculator {
 			startPoint++;
 		}
 		
-		for (int i : numbers) {
-			System.out.println(i);
+		for (int i = 0; i < numbers.length; i++) {
+			if (i < numbers.length - 1) {
+				System.out.print(numbers[i] + separator);
+			} else {
+				System.out.print(numbers[i]);
+			}
 		}
+			
 
 	}
 
