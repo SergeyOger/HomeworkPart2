@@ -4,11 +4,10 @@ public class SquareCalculator {
 
 	public static void main(String[] args) {
 		String separator = ",";
-		StringBuilder sb = new StringBuilder();
-		int number = 2;
+		int number = 15;
 		int startPoint = (int) Math.sqrt(number);
 		//System.out.println("Start point " + startPoint);
-		int length = 15;
+		int length = 5;
 
 		int[] numbers = new int[length];
 

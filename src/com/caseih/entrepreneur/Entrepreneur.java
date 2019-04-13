@@ -1,47 +1,30 @@
 package com.caseih.entrepreneur;
 
 public class Entrepreneur {
-	private int profit;
-	private int creditSum;
-	private int interestRate;
-	private static int counter;
-	
-	public Entrepreneur(int creditSum, int interestRate, int profit) {
-		this.creditSum = creditSum;
-		this.interestRate = interestRate;
-		this.profit = profit;
-		counter++;
-	}
-	
-	public void enterpriseLaunch() {
+    public static void main(String[] args) {
+        int sumOfCredit = 10000;
+        int profitSum = 1000;
+        int interestRate = 20;
+        int previousAmount = 0;
+        int maximumLendingPeriod = 15;
 
-		new Credit(creditSum, interestRate);
-		new NewEnterprise(profit);
-		
-		int realProfitPerYear = 0;
-		int termOfCrediting = 0;
+        for (int iterator = 0;iterator < maximumLendingPeriod; iterator++) {
+            sumOfCredit = ((sumOfCredit + (sumOfCredit / 100) * interestRate) - profitSum);
+            System.out.println(sumOfCredit);
+            if ((iterator > 0 && previousAmount < sumOfCredit) || iterator == (maximumLendingPeriod - 1)) {
+                System.out.println("The loan will not be paid");
+                break;
+            } else {
+                if (sumOfCredit > 0) {
+                    //System.out.println("You duty is  " + sumOfCredit);
+                    previousAmount = sumOfCredit;
+                } else {
+                    System.out.println("The loan has been paid for " + iterator + " year");
+                    break;
+                }
+            }
 
-		for (int i = 0; i <= termOfCrediting; i++) {
-			termOfCrediting = i+1;
-			System.out.println("Years of lending " + termOfCrediting); 
-			System.out.println("Sum of credit " + Credit.getSumOfCredit());
-			System.out.println("Sum of credit with charge " + Credit.chargeInterestPerYear());
-			System.out.println("Enterparaise profit " + NewEnterprise.getProfit());
-			realProfitPerYear = NewEnterprise.getProfit() - Credit.chargeInterestPerYear();
-			System.out.println("The debt of the bank's enterprise " + realProfitPerYear);
-			
-			if (realProfitPerYear < 0) {
-				Credit.changeSumOfCredit(Math.abs(realProfitPerYear));
-				
-			} else {
-				break;
-			}
-		}
-		
-		System.out.println("Congratulations, you did it in " + termOfCrediting + " year");
-	}
-	
-	public static void getCounter() {
-		System.out.println("Number of entrepreneurs: " + counter);;
-	}
+        }
+
+    }
 }
